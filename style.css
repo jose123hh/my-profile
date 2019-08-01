@@ -6,6 +6,7 @@ body {
 .content {
     grid-area: content;
     background: url(images/background-shapes.png);
+    height: 1000px;
 }
 .sidebar {
     grid-area: sidebar;
@@ -59,9 +60,9 @@ nav li a:hover {
 }
 .hero {
     position: relative;
-    top: -900px;
-    width: 870px;
-    left: 450px;
+    top: -1000px;
+    width: 725px;
+    left: -300px;
     max-width: 960px;
     margin: 0 auto;
     text-align: center;
@@ -69,6 +70,7 @@ nav li a:hover {
 .hero img {
     width: 380px;
     float: right;
+    top: 200px;
 }
 .hero h1 {
     font-size: 2em;
@@ -94,29 +96,42 @@ nav li a:hover {
 .action-btn:hover {
     box-shadow: 0 10px 50px rgba(188,197,216,1);
 }
-footer ul {
-    max-width: 640px;
-    margin: 2em auto;
-    padding: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
+.input-form{
+    position: relative;
+    width: 1640px;
+    margin-left: 30px;
+    margin-right: 0px;
+    margin-top: 55px;
+    background-color: white;
+    box-shadow: 0 0 7px 0px rgba(136, 146, 146, 0);
+    padding: 30px;
+    top: -870px;
+    left: 270px;
 }
-footer ul li {
-    list-style: none;
-    align-self: flex-end;
+.form{
+    left: 200px;
+    top: 1900px;
+    width: 100%;
+    display: grid;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
-footer ul li a {
-    text-decoration: none;
-    color: #c1c6ce;
+label{
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
 }
-svg {
-    width: 40%;
+input{
+    font-family: 'Helvetica', sans-serif;
+    padding: 10px 20px 10px 20px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #8888;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
 }
-footer p{
-    font-size: 0.8em;
-}
-
 @media (min-width: 1040px) {
     .container {
         grid-template-areas:
@@ -151,10 +166,12 @@ footer p{
     .hero p {
         width: 60%;
     }
-    footer ul {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 2em 0;
+    .icon {
+        position: relative;
+        height: 10px;
+        width: 10px;
+        float: left;
+        left: 40px;
     }
     svg {
         width: 20%;
