@@ -220,5 +220,11 @@ footer p{
         border-radius: 6px;
         background-color: transparent;
     }
+    .footer {
+        position: relative;
+        grid-area: footer;
+        background: white;
+        top: 0px;
+        height: 10vh;
+    }
 }
-
