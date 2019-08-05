@@ -6,7 +6,7 @@ body {
 .content {
     grid-area: content;
     background: url(images/background-shapes.png);
-    height: 1000px;
+    height: 1265px;
 }
 .sidebar {
     grid-area: sidebar;
@@ -17,18 +17,20 @@ body {
     justify-content: center;
 }
 .footer {
+    position: relative;
     grid-area: footer;
     background: white;
+    top: 505px;
+    height: 10vh;
 }
 .container {
     font-size: 1.5em;
     width: 150%;
-    height: 250vh;
+    height: 150vh;
     display: grid;
-    grid-template-areas:
-        "sidebar"
-        "content"
-        "footer";
+    grid-template-areas: "sidebar"
+ "content"
+ "footer";
     grid-template-columns: 1fr;
     grid-template-rows: 130px 800px 250px;
 }
@@ -60,17 +62,22 @@ nav li a:hover {
 }
 .hero {
     position: relative;
-    top: -1000px;
-    width: 725px;
-    left: -300px;
+    top: -990px;
+    width: 870px;
+    left: 0px;
     max-width: 960px;
     margin: 0 auto;
     text-align: center;
 }
+.hero-content{
+    padding: 2px;
+}
 .hero img {
-    width: 380px;
+    position: relative;
+    width: 605px;
     float: right;
-    top: 200px;
+    top: 25px;
+    left: 95px;
 }
 .hero h1 {
     font-size: 2em;
@@ -98,23 +105,23 @@ nav li a:hover {
 }
 .input-form{
     position: relative;
-    width: 1640px;
-    margin-left: 30px;
-    margin-right: 0px;
-    margin-top: 55px;
-    background-color: white;
-    box-shadow: 0 0 7px 0px rgba(136, 146, 146, 0);
-    padding: 30px;
-    top: -870px;
-    left: 270px;
+    max-width: 80%;
+    margin-left: 17%;
+    margin-right: 2%;
+    margin-top: -905px;
+    border-radius: 6px;
+    background-color: transparent;
+}
+.position-form{
+    top: 100px;
+    left: 100px;
 }
 .form{
-    left: 200px;
-    top: 1900px;
-    width: 100%;
+    width: 80%;
     display: grid;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    left: 10px;
+    top: 10px;
+    text-align: center;
 }
 label{
     font-family: 'Helvetica', sans-serif;
@@ -124,7 +131,7 @@ label{
 }
 input{
     font-family: 'Helvetica', sans-serif;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px 10px 10px;
     outline: none;
     border-radius: 3px;
     border: 1px solid #8888;
@@ -132,13 +139,38 @@ input{
     margin-bottom: 5px;
     font-size: 16px;
 }
-@media (min-width: 1040px) {
+footer ul {
+    max-width: 640px;
+    margin: 2em auto;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+footer ul li {
+    list-style: none;
+    align-self: flex-end;
+}
+footer ul li a {
+    text-decoration: none;
+    color: #c1c6ce;
+}
+svg {
+    width: 40%;
+}
+footer p{
+    font-size: 0.8em;
+}
+
+@media (min-width: 992px) and (max-width: 1279px){
     .container {
         grid-template-areas:
             "sidebar content"
             "sidebar footer";
         grid-template-columns: 300px 1fr;
         grid-template-rows: 1fr auto;
+        width: 150%;
+        height: 185vh;
     }
     nav ul {
         display: flex;
@@ -153,8 +185,13 @@ input{
             padding-top: 3em;
     }
     .hero {
+        position: relative;
+        top: -1325px;
+        width: 730px;
+        left: 365px;
+        max-width: 960px;
+        margin: 0 auto;
         text-align: left;
-        margin: 2em auto;
     }
     .hero img {
         width: 280px;
@@ -166,14 +203,22 @@ input{
     .hero p {
         width: 60%;
     }
-    .icon {
-        position: relative;
-        height: 10px;
-        width: 10px;
-        float: left;
-        left: 40px;
+    footer ul {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2em 0;
     }
     svg {
         width: 20%;
     }
+    .input-form {
+        position: relative;
+        max-width: 80%;
+        margin-left: 15%;
+        margin-right: 5%;
+        margin-top: -595px;
+        border-radius: 6px;
+        background-color: transparent;
+    }
 }
+
