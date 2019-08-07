@@ -380,3 +380,79 @@ footer p{
         height: 1003px;
     }
 }
+@media (min-width: 375px) and (max-width: 640px){
+    .container {
+        grid-template-areas:
+            "sidebar content"
+            "sidebar footer";
+        grid-template-columns: 180px 1fr;
+        grid-template-rows: 1fr auto;
+        width: 230%;
+        height: 170vh;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .sidebar {
+        position: relative;
+        height: 953px;
+        background: linear-gradient(
+            rgba(249,107,142,1),
+            rgba(218,103,130,1),
+            rgba(130,125,254,1));
+            padding-top: 3em;
+    }
+    .hero {
+        position: relative;
+        top: -1400px;
+        width: 640px;
+        left: 325px;
+        max-width: 854px;
+        margin: 0 auto;
+        text-align: left;
+        font-size: 13px;
+    }
+    .hero img {
+        width: 155px;
+        float: right;
+        top: -100px;
+        left: -385px;
+    }
+    .hero h1{
+        font-size: 3em;
+    }
+    .hero p {
+        width: 60%;
+    }
+    footer ul {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2em 0;
+    }
+    svg {
+        width: 20%;
+    }
+    .input-form {
+        position: relative;
+        max-width: 80%;
+        margin-left: 15%;
+        margin-right: 5%;
+        margin-top: -1025px;
+        border-radius: 6px;
+        background-color: transparent;
+    }
+    .footer {
+        position: relative;
+        grid-area: footer;
+        background: white;
+        top: -505px;
+        height: 10vh;
+    }
+    .content {
+        grid-area: content;
+        background: url(images/background-shapes.png);
+        height: 1003px;
+    }
+}
